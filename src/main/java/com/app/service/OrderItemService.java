@@ -1,9 +1,9 @@
-package brijesh.bhatt.service;
+package com.app.service;
 
-import brijesh.bhatt.entity.OrderItem;
-import brijesh.bhatt.exception.ItemNotFoundException;
-import brijesh.bhatt.repository.OrderItemRepository;
-import brijesh.bhatt.to.ItemTO;
+import com.app.entity.OrderItem;
+import com.app.exception.ItemNotFoundException;
+import com.app.repository.OrderItemRepository;
+import com.app.to.ItemTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class OrderItemService {
         return items;
     }
 
-    public ItemTO getAllOrderItemById(int id) {
+    public ItemTO getAllOrderItemById(Integer id) {
         logger.info("getAllOrderItemById is being called.");
         Optional<OrderItem> result = itemRepository.findById(id);
         if (result.isPresent()) {

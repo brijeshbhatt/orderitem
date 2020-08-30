@@ -1,6 +1,6 @@
-package brijesh.bhatt.repository;
+package com.app.repository;
 
-import brijesh.bhatt.entity.OrderItem;
+import com.app.entity.OrderItem;
 import org.springframework.data.repository.CrudRepository;
 
 public interface OrderItemRepository extends CrudRepository<OrderItem, Integer> {
