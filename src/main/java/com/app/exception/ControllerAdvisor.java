@@ -1,4 +1,4 @@
-package brijesh.bhatt.exception;
+package com.app.exception;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

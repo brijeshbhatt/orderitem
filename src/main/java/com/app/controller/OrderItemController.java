@@ -1,7 +1,7 @@
-package brijesh.bhatt.controller;
+package com.app.controller;
 
-import brijesh.bhatt.service.OrderItemService;
-import brijesh.bhatt.to.ItemTO;
+import com.app.to.ItemTO;
+import com.app.service.OrderItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,7 +28,7 @@ public class OrderItemController {
     }
 
     @GetMapping(path = "/items/{id}", produces = "application/json")
-    public ItemTO getItemsById(@PathVariable("id") int id) {
+    public ItemTO getItemsById(@PathVariable("id") Integer id) {
         return orderItemService.getAllOrderItemById(id);
     }
 
@@ -43,7 +43,7 @@ public class OrderItemController {
     }
 
     @DeleteMapping("/items/{id}")
-    public int deleteBook(@PathVariable("id") int id) {
+    public int deleteItem(@PathVariable("id") Integer id) {
         return orderItemService.delete(id);
     }
 }
